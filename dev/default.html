@@ -1,0 +1,169 @@
+
+
+    <!doctype html>
+    <html lang="en"> 
+    <head>
+	<title>Responsive Table Plugin</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.responsiveTable.js"></script>
+
+	
+	<style>
+		.table tbody td::before
+		{
+			content: attr(data-title) ": ";
+			display:none;
+		}
+		@media only screen and (max-width: 638px) {
+			.table thead
+			{
+				display:none;
+			}
+
+			.table tbody td
+			{
+				float: left;
+				width: 100%;
+				position:relative;
+				padding-left:60%;
+				white-space:nowrap;
+				.box-sizing(border-box);
+			}
+
+			.table tbody td::before
+			{
+				content: attr(data-title) ": ";
+				display: block;
+				position:absolute;
+				top:0;
+				left:14px;
+				max-width:40%;
+				font-weight:bold;
+				color:#103184;
+			}
+		}
+    
+	</style>
+	
+	
+    <!-- Example usage -->
+    <script type="text/javascript">
+	$(function() {
+		$('.table').responsiveTable();
+	});
+	</script>
+        
+
+
+
+    </head>
+    <body>
+	
+	
+    
+	<div class="pageContent">
+		<h1>Responsive Table Plugin</h1>
+		<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">
+<a href="/portal/billing/previous-invoices/?sort=InvoiceNo&amp;sortdir=ASC">Invoice number</a>            </th>
+            <th scope="col">
+<a href="/portal/billing/previous-invoices/?sort=PatientName&amp;sortdir=ASC">Patient name</a>            </th>
+            <th scope="col">
+<a href="/portal/billing/previous-invoices/?sort=PatientMembershipNo&amp;sortdir=ASC">Membership number</a>            </th>
+            <th scope="col">
+<a href="/portal/billing/previous-invoices/?sort=InvoiceDate&amp;sortdir=ASC">Invoice date</a>            </th>
+            <th scope="col">
+<a href="/portal/billing/previous-invoices/?sort=InvoiceTotal&amp;sortdir=ASC">Invoice total</a>            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-title="Invoice number">0000000450</td>
+            <td data-title="Patient name">Tom Wood</td>
+            <td data-title="Membership number">12387412</td>
+            <td data-title="Invoice date">14/07/2013</td>
+            <td data-title="Invoice total">1,903</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000451</td>
+            <td data-title="Patient name">Paul Brown</td>
+            <td data-title="Membership number">32371284</td>
+            <td data-title="Invoice date">15/07/2013</td>
+            <td data-title="Invoice total">545</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000454</td>
+            <td data-title="Patient name">Tom Wood</td>
+            <td data-title="Membership number">12387412</td>
+            <td data-title="Invoice date">25/07/2013</td>
+            <td data-title="Invoice total">90</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000452</td>
+            <td data-title="Patient name">Jill Harris</td>
+            <td data-title="Membership number">82371645</td>
+            <td data-title="Invoice date">15/07/2013</td>
+            <td data-title="Invoice total">1,183</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000502</td>
+            <td data-title="Patient name">George Green</td>
+            <td data-title="Membership number">42982658</td>
+            <td data-title="Invoice date">25/07/2013</td>
+            <td data-title="Invoice total">100.24</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000455</td>
+            <td data-title="Patient name">Paul Brown</td>
+            <td data-title="Membership number">32371284</td>
+            <td data-title="Invoice date">25/07/2013</td>
+            <td data-title="Invoice total">8,023</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000457</td>
+            <td data-title="Patient name">Tom Wood</td>
+            <td data-title="Membership number">12387412</td>
+            <td data-title="Invoice date">26/07/2013</td>
+            <td data-title="Invoice total">45</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000453</td>
+            <td data-title="Patient name">Jill Harris</td>
+            <td data-title="Membership number">82371645</td>
+            <td data-title="Invoice date">23/07/2013</td>
+            <td data-title="Invoice total">62</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000514</td>
+            <td data-title="Patient name">George Green</td>
+            <td data-title="Membership number">42982658</td>
+            <td data-title="Invoice date">29/07/2013</td>
+            <td data-title="Invoice total">87</td>
+        </tr>
+        <tr>
+            <td data-title="Invoice number">0000000512</td>
+            <td data-title="Patient name">Paul Brown</td>
+            <td data-title="Membership number">32371284</td>
+            <td data-title="Invoice date">29/07/2013</td>
+            <td data-title="Invoice total">550.50</td>
+        </tr>
+    </tbody>
+    </table>
+	</div>
+
+          
+    
+
+
+
+
+    
+	
+    </body>
+	
+    </html>
